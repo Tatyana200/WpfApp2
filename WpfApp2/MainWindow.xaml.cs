@@ -23,6 +23,26 @@ namespace WpfApp2
         public MainWindow()
         {
             InitializeComponent();
+            Updlistview()
+
+        }
+        void Updlistview()
+        {
+            Main1 main = new Main1();
+            lvViewGroup.ItemsSource = main.ReadGroup();
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Group  group = new Group()
+            {
+                NameGroup = tbNamberGroup.Text,
+                NumberGroup = tbNamberGroup.Text,
+                CuratorGroup = tbCurator.Text
+            };
+            Main1 main = new Main1();
+            main.AddGroup(group);
+            Updlistview();
+        }
         }
     }
-}
+

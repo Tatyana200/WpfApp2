@@ -13,7 +13,10 @@
         <TextBox x:Name="tbCurator" Height="33" Width="230" Canvas.Left="104" Canvas.Top="259"/>
         <Label Content="Номер группы" Canvas.Left="104" Canvas.Top="145" />
         <Label Content="фио куратора" Canvas.Left="104" Canvas.Top="228" />
-        <Button Content="Добавить" Canvas.Left="104" Canvas.Top="328" Width="247" Height="59"/>
+        <Button Content="Добавить" Canvas.Left="104" Canvas.Top="328" Width="247" Height="59" Click="Button_Click"/>
+        <ListView x:Name="lvViewGroup" Height="300" Width="269" Canvas.Left="379" Canvas.Top="99" DisplayMemberPath="numberGroup">
+            </ListView>
+                <Label Content="Название специальности" Canvas.Left="379" Canvas.Top="73"/>
 
     </Canvas>
 </Window>
